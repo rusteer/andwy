@@ -1,0 +1,14 @@
+INSERT INTO `andwyadmin`.`t_release`(`product_id`,`market_account_id`,`package_name`,`release_product_name`,`version_description`,`need_build`,`build_count`,`build_status`,`need_publish`,`publish_try_count`,`publish_success_count`,`publish_status`,`publish_url`,`market_version`,`failure_description`,`status`,`create_time`,`update_time`) VALUES 
+('17', '37', 'net.andwy.systemprotector', '保密锁', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 15:57:31'            		),
+('18', '37', 'net.andwy.barcode', '二维码快拍', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:21:31'                    ),
+('19', '37', 'net.andwy.game.gobang', '五子棋', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:22:01'                    ),
+('20', '37', 'net.andwy.calendar', '万年历', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:23:58'                       ),
+('21', '37', 'net.andwy.game.yumm', '食指小怪物', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:20:28'                  ),
+('22', '37', 'net.andwy.brokenscreen', '碎屏整蛊', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:18:49'                 ),
+('23', '37', 'net.andwy.fartsound', '搞笑放屁大全', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:23:00'                ),
+('24', '37', 'net.andwy.education.learntodraw', '宝宝学画画', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:23:32'      ),
+('25', '37', 'net.andwy.braintrainer', '脑力训练大师', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:25:07'             ),
+('26', '37', 'net.andwy.animalpairup', '小动物连连看', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:19:48'             ),
+('27', '37', 'net.andwy.currencyrate', '全球货币汇率', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:24:29'             ),
+('28', '37', 'net.andwy.autoairplane', '定时开关机', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 12:22:34'               ),
+('29', '37', 'net.andwy.onetouchlock', '一键锁屏', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 01:05:20', '2013-04-23 16:11:56'                 );

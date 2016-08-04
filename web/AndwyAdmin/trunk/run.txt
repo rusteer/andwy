@@ -1,0 +1,14 @@
+svn up /workspace/android/code;
+mvn -f /workspace/android/code/biz/AndroidLibBiz/pom.xml clean install;
+mvn -f /workspace/android/code/published/LinkupLib/trunk/pom.xml clean install;
+mvn -f /workspace/wg/code/web/AndwyAdmin/trunk/pom.xml clean jetty:run -Djetty.port=8080
+
+mvn clean install -Dmaven.test.skip=true
+
+
+
+svn up /workspace/wg/
+mvn -f /workspace/wg/code/android/biz/AndroidLibBiz/pom.xml clean install;
+mvn -f /workspace/wg/code/android/published/3/LinkupLib/trunk/pom.xml clean install;
+mvn -f /workspace/wg/code/web/AndwyAdmin/trunk/pom.xml clean install -Dmaven.test.skip=true
+cp /home/hike/.m2/repository/net/andwy/andwyadmin/AndwyAdmin/1.0.0/AndwyAdmin-1.0.0.war  /var/lib/tomcat7/webapps/myadmin.war

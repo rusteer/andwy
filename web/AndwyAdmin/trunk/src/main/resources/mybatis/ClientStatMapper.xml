@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.andwy.andwyadmin.repository.stat.ClientStatDaoMybatis">
+    <select id="getStat" parameterType="map" resultType="ClientStat">
+		select
+			a.client_id as clientId,
+			sum(push_count) as pushCount,
+			sum(install_count) as installCount,
+			sum(install_earning) as installEarning
+		from t_package_stat a
+		<where>
+			and a.stat_date>=#{fromDate}
+			<![CDATA[ and a.stat_date <=#{toDate}]]>
+			<if test="clientId != null"> and a.client_id=#{clientId}</if>
+		</where>
+		group by clientId 
+	</select>
+</mapper> 

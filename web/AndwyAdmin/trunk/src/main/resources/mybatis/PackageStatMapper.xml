@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.andwy.andwyadmin.repository.stat.PackageStatDaoMybatis">
+	<update id="increasePushStat" parameterType="PackageStat">
+		INSERT INTO `wg`.`t_package_stat` 
+			( `package_id`,`stat_date`,`push_count`,`install_count`, `install_earning`) VALUES (#{packageId},#{statDate},1,0,0 )
+		ON DUPLICATE KEY 
+			update push_count=push_count+1; 
+	</update>
+	
+	<update id="increaseInstallStat" parameterType="PackageStat">
+		INSERT INTO `wg`.`t_package_stat` 
+			( `package_id`,`stat_date`,`push_count`,`install_count`, `install_earning`) VALUES (#{packageId},#{statDate},0,1,#{installEarning})
+		ON DUPLICATE KEY 
+			update install_count=install_count+1,install_earning=install_earning+#{installEarning}  
+	</update>	
+</mapper> 

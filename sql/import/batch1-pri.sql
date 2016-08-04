@@ -1,0 +1,14 @@
+INSERT INTO `andwyadmin`.`t_release`(`product_id`,`market_account_id`,`package_name`,`release_product_name`,`version_description`,`need_build`,`build_count`,`build_status`,`need_publish`,`publish_try_count`,`publish_success_count`,`publish_status`,`publish_url`,`market_version`,`failure_description`,`status`,`create_time`,`update_time`) VALUES 
+('4', '12', 'net.andwy.babysounds.pri', 'Baby铃声秀', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 16:17:48', '2013-04-23 12:11:14'),
+('5', '12', 'net.andwy.crazysounds.pri', '疯狂声音秀', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 16:38:33', '2013-04-23 15:46:26'),
+('7', '12', 'net.andwy.animalsounds.pri', '动物声音秀', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 17:05:59', '2013-04-23 12:10:45'),
+('8', '12', 'net.andwy.naturesounds.pri', '天籁之音', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 17:15:33', '2013-04-23 12:10:20'),
+('9', '12', 'net.andwy.weaponsounds.pri', '枪声秀', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 17:25:34', '2013-04-23 15:50:23'),
+('10', '12', 'net.andwy.fruitpairup.pri', '水果连连看', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 17:30:10', '2013-04-23 12:08:58'),
+('11', '12', 'net.andwy.lwp.mystify.pri', '神秘变幻动态墙纸', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 17:41:46', '2013-04-23 12:16:43'),
+('12', '12', 'net.andwy.wallpaper.liverain.pri', '雨滴动态墙纸', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-16 18:03:25', '2013-04-23 12:14:02'),
+('13', '12', 'net.andwy.shakelocker.pri', '摇摇锁屏', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-17 10:36:38', '2013-04-23 12:09:27'),
+('14', '12', 'net.andwy.fakeevent.pri', '虚拟来电', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-17 16:11:42', '2013-04-23 12:15:46'),
+('15', '12', 'net.andwy.lockscreen.pri', '一键锁屏', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-17 16:46:01', '2013-04-23 12:14:22'),
+('16', '12', 'net.andwy.compass.pri', 'i指南针', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-17 17:16:25', '2013-04-23 12:15:07'),
+('6', '12', 'net.andwy.taskmanager.pri', '任务管理器', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-23 12:12:59', '2013-04-23 12:12:59');

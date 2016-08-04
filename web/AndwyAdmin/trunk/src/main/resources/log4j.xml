@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+	<appender name="myConsole" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+		<!--过滤器设置输出的级别 -->
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="levelMin" value="debug" />
+			<param name="levelMax" value="warn" />
+			<param name="AcceptOnMatch" value="true" />
+		</filter>
+	</appender>
+
+	<appender name="myFile" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/output.log" /><!-- 
+			设置日志输出文件名 -->
+		<!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->
+		<param name="Append" value="true" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %p (%c:%L)- %m%n" />
+		</layout>
+	</appender>
+	<appender name="TestAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/localhost/test.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+	<appender name="ClientAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/client.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+
+	<appender name="AdminAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/admin.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+
+	<appender name="FakeClientAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/fake.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+
+	<appender name="ErrorAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/error.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+
+	</appender>
+
+	<appender name="PushAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/push.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+	<appender name="ConfigAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/config.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+	<appender name="RecommendAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/recommend.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+	<appender name="InstallReportAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/install_report.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+	<appender name="PreDownloadAppender" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="File" value="/var/log/wg/wg/localhost/pre_download.log" />
+		<param name="DatePattern" value="'.'yyyy-MM-dd" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p %c-%m%n" />
+		</layout>
+	</appender>
+
+	<logger name="ClientLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="ClientAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+	<logger name="AdminLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="AdminAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+	<logger name="FakeClientLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="FakeClientAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+
+	<logger name="ErrorLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="ErrorAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+
+
+	<logger name="PushLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="PushAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+	<logger name="ConfigLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="ConfigAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+	<logger name="RecommendLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="RecommendAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+	<logger name="InstallReportLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="InstallReportAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+	<logger name="PreDownloadLogger" additivity="false">
+		<priority value="info" />
+		<appender-ref ref="PreDownloadAppender" />
+		<appender-ref ref="myConsole" />
+	</logger>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<root>
+		<priority value="info" />
+		<appender-ref ref="myConsole" />
+		<appender-ref ref="myFile" />
+	</root>
+</log4j:configuration>  

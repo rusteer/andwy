@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="net.andwy.andwyadmin.repository.stat.StatDaoMybatis">
+    <select id="getMarketData" parameterType="map" resultType="net.andwy.andwyadmin.bean.Stat">
+		select
+			c.id as entityId,
+			a.stat_date as statDate,
+			sum(push_count) as pushCount,
+			sum(install_count) as installCount,
+			sum(install_earning) as installEarning
+		from t_package_stat a, t_package b , t_market c, t_market_account d
+		<where>
+		    a.package_id=b.id and b.market_account_id=d.id and d.market_id=c.id
+			and a.stat_date>=#{fromDate}
+			<![CDATA[ and a.stat_date <=#{toDate}]]>
+		</where>
+		group by entityId,statDate 
+	</select>
+	
+	
+    <select id="getBatchData" parameterType="map" resultType="net.andwy.andwyadmin.bean.Stat">
+		select
+			c.batch_id as entityId,
+			a.stat_date as statDate,
+			sum(push_count) as pushCount,
+			sum(install_count) as installCount,
+			sum(install_earning) as installEarning
+		from t_package_stat a, t_package b , t_product c
+		<where>
+		    a.package_id=b.id and b.product_id=c.id
+			and a.stat_date>=#{fromDate}
+			<![CDATA[ and a.stat_date <=#{toDate}]]>
+		</where>
+		group by entityId,statDate 
+	</select>  
+	
+    <select id="getPackageData" parameterType="map" resultType="net.andwy.andwyadmin.bean.Stat">
+		select
+			b.id as entityId,
+			a.stat_date as statDate,
+			sum(push_count) as pushCount,
+			sum(install_count) as installCount,
+			sum(install_earning) as installEarning
+		from t_package_stat a, t_package b , t_product c
+		<where>
+		    a.package_id=b.id and b.product_id=c.id
+		    and c.id=${productId}
+			and a.stat_date>=#{fromDate}
+			<![CDATA[ and a.stat_date <=#{toDate}]]>
+		</where>
+		group by entityId,statDate 
+	</select>     
+	
+    <select id="getProductData" parameterType="map" resultType="net.andwy.andwyadmin.bean.Stat">
+		select
+			c.id as entityId,
+			a.stat_date as statDate,
+			sum(push_count) as pushCount,
+			sum(install_count) as installCount,
+			sum(install_earning) as installEarning
+		from t_package_stat a, t_package b , t_product c
+		<where>
+		    a.package_id=b.id and b.product_id=c.id
+		    and c.batch_id=#{batchId}
+			and a.stat_date>=#{fromDate}
+			<![CDATA[ and a.stat_date <=#{toDate}]]>
+		</where>
+		group by entityId,statDate 
+	</select>     
+	
+    <select id="getAppData" parameterType="map" resultType="net.andwy.andwyadmin.bean.Stat">
+		select
+			b.id as entityId,
+			a.stat_date as statDate,
+			sum(a.push_count) as pushCount,
+			sum(a.install_count) as installCount,
+			sum(a.install_count*b.price) as installEarning
+		from t_app_stat a, t_app b  
+		<where>
+		    a.app_id=b.id 
+			and a.stat_date>=#{fromDate}
+			<![CDATA[ and a.stat_date <=#{toDate}]]>
+		</where>
+		group by entityId,statDate 
+	</select>  
+	
+    <select id="getDeveloperData" parameterType="map" resultType="net.andwy.andwyadmin.bean.Stat">
+		select
+			c.id as entityId,
+			a.stat_date as statDate,
+			sum(push_count) as pushCount,
+			sum(install_count) as installCount,
+			sum(install_earning) as installEarning
+		from t_package_stat a, t_package b , t_developer c, t_market_account d
+		<where>
+		    a.package_id=b.id and b.market_account_id=d.id and d.developer_id=c.id
+			and a.stat_date>=#{fromDate}
+			<![CDATA[ and a.stat_date <=#{toDate}]]>
+		</where>
+		group by entityId,statDate 
+	</select>    
+</mapper> 

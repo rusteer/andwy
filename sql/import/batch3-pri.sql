@@ -1,0 +1,14 @@
+INSERT INTO `andwyadmin`.`t_release`(`product_id`,`market_account_id`,`package_name`,`release_product_name`,`version_description`,`need_build`,`build_count`,`build_status`,`need_publish`,`publish_try_count`,`publish_success_count`,`publish_status`,`publish_url`,`market_version`,`failure_description`,`status`,`create_time`,`update_time`) VALUES 
+('30', '40', 'net.andwy.linkup.fruit.pri', '水果连连看', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:03:07'										),
+('31', '40', 'net.andwy.linkup.animal.pri', '动物连连看', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:04:08'                  ),
+('32', '40', 'net.andwy.linkup.corpse.pri', '植物僵尸连连看', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:02:54'              ),
+('33', '40', 'net.andwy.quickspot.pri', '找不同', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:04:14'                          ),
+('34', '40', 'net.andwy.game.sudoku.pri', '九宫格数独游戏', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:03:52'                ),
+('35', '40', 'net.andwy.game.coloringpages.pri', '儿童涂鸦', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:04:20'               ),
+('36', '40', 'net.andwy.fullscreenclock.pri', '全屏时钟', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 16:48:55'                  ),
+('37', '40', 'net.andwy.smartcompass.pri', '智能指南针', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:04:27'                   ),
+('38', '40', 'net.andwy.game.animalspackage.pri', '动物游戏总动员', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:03:29'        ),
+('39', '40', 'net.andwy.braintrainer.imageviewer.pri', '记忆训练大师', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:04:42'     ),
+('40', '40', 'net.andwy.smartstay.pri', '防黑屏助手', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 14:04:50'                      ),
+('41', '40', 'net.andwy.photoframe.pri', '精美相框', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 06:28:23', '2013-04-23 16:44:26'                       ),
+('43', '40', 'com.game.frozenbubble.pri', '打泡泡', '', 'Y', '0', 'Waiting for Build', NULL, '0', '0', NULL, NULL, NULL, NULL, 'E', '2013-04-18 17:51:34', '2013-04-22 17:13:34'                        );
